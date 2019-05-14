@@ -1,5 +1,5 @@
 # TradeWin
-## Developed by Waheed Khan and Team (Sravani & Avinash) to Demonstrate all possible phases of Angular 2+
+## Developed by Waheed Khan and Team (Sravani, Avinash & Mahesh) to Demonstrate all possible phases of Angular 2+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 
