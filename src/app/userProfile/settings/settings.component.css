@@ -1,0 +1,60 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin-top: 0px;
+}
+
+hr.style {
+  border-color: crimson;
+}
+
+.nav {
+  font-family: 'Muli', sans-serif;
+  font-size: 2rem;
+}
+
+h4 {
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: lighter;
+}
+
+label {
+  color: orangered;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+}
+
+input {
+  font-family: 'Varela round', sans-serif;
+  font-size: 1.5rem;
+  padding: 5%;
+  background-color: #F0F8FF;
+}
+
+input[type="file"] {
+  padding: 4%;
+  background-color: #F0F8FF;
+}
+
+select {
+  padding: 5%;
+  background-color: #F0F8FF;
+}
+
+textarea {
+  font-family: 'Varela round', sans-serif;
+  font-size: 1.5rem;
+  background-color: #F0F8FF;
+}
+
+.btn {
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.7rem;
+  padding: 1%;
+}

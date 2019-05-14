@@ -1,0 +1,91 @@
+<body>
+  <br>
+  <section id="contact">
+    <div class="container">
+      <h3 class="text-center text-uppercase">contact us</h3>
+      <p class="text-center w-75 m-auto">We are here to help you with the better way to solve that you may faced some
+        problem.</p>
+      <br>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+              <h4 class="text-uppercase mb-5">call us</h4>
+              <p class="phone">+91-8886197968<br>+91-9603707383</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
+              <h4 class="text-uppercase mb-5">loaction</h4>
+              <address>Ameerpet, Hyderabad, TS. 500012</address>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
+              <h4 class="text-uppercase mb-5">office</h4>
+              <address>Tirupathi, Chittoor, APS. 517193</address>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
+              <h4 class="text-uppercase mb-5">email</h4>
+              <p class="email">http://infotechpro@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <br><br><br><br><br><br><br><br> -->
+  <div class="container">
+    <h3 class="text-left text-uppercase">enquiry form</h3>
+    <p>Please feel free ask anything to us.</p>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <form class="form-group">
+          <label for="name">NAME<span>*</span></label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="enquiry.name" placeholder="Your Full Name" required>
+          <br>
+          <label for="email">EMAIL<span>*</span></label>
+          <input type="email" class="form-control" name="email" [(ngModel)]="enquiry.email"  placeholder="Your Email Address" required>
+          <br>
+          <label for="subject">SUBJECT<span>*</span></label>
+          <select name="subject" class="col-md-6 form-control" [(ngModel)]="enquiry.subject" required>
+            <option value="none" disabled>None</option>
+            <option value="feedback">Feedback</option>
+            <option value="report">Report a bug</option>
+            <option value="feature">Feature request</option>
+          </select>
+          <br><br><br><br>
+          <label for="comment">LEAVE A COMMENT<span>*</span></label>
+          <textarea class="form-control" name="comment" cols="5" rows="5" [(ngModel)]="enquiry.comment" required>Write something...</textarea>
+          <br>
+          <button class="col-md-12 btn btn-info" (click)="submit()">
+            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+            SEND MESSAGE
+          </button>
+        </form>
+      </div>
+
+      <!-- // For Google maps -->
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.045081864149!2d78.4724704498768!3d17.361563588035686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb978a6e1a939b%3A0xcb5a69e4aaf113fb!2sCharminar!5e0!3m2!1sen!2sin!4v1557395104209!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <!-- End -->
+
+    </div>
+  </div>
+  <br>
+
+</body>

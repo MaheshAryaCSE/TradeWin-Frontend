@@ -1,0 +1,61 @@
+<body>
+  <!-- ******HEADER****** -->
+  <header class="header">
+    <div class="container">
+      <div class="teacher-name" style="padding-top:20px;">
+
+        <div class="row" style="margin-top:0px;">
+          <div class="col-md-9">
+            <h2 class="admin-name">
+              <strong>{{userDetails.firstName}} {{userDetails.lastName}}</strong>
+            </h2>
+          </div>
+          <div class="col-md-2">
+            <div class="button" style="float: right;">
+              <a routerLink="/admin/settings" class="btn btn-info btn-sm">Edit Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:20px;">
+        <div class="col-md-3">
+          <!-- Image -->
+          <!-- <a routerLink="/admin/profile"> <img class="rounded-circle"
+              src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-1.jpg" alt="image"
+              style="width:200px; height:200px; margin-top:-70px;"></a> -->
+
+
+
+              <a (click)="inputField.click()" style="cursor:pointer;">
+                <input type="file" class="form-control" name="photo" id="photo" style="display:none;" (change)="onFileSelected($event)"
+                #inputField>
+                <img class="rounded-circle" *ngIf='!userDetails.profileImg'
+                src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-1.jpg" alt="image"
+                style="width:200px; height:200px; margin-top:-70px;">
+              <img class="rounded-circle" *ngIf='userDetails.profileImg' [src]="userDetails.profileImg" style="width:200px; height:200px; margin-top:-70px;" />
+            </a>
+        </div>
+
+        <div class="col-md-6">
+          <!-- Rank & Qualifications -->
+          <h5 style="color:#3AAA64">{{userDetails.designation}}, <small>VISUALPATH Technologies</small></h5>
+          <p *ngIf="userDetails.address"><span>ADDRESS</span> | {{userDetails.address}}</p>
+          <p *ngIf="!userDetails.address"><span>ADDRESS</span> | {{userDetails.address}}</p>
+          <p *ngIf="userDetails.email"><span>EMAIL</span> | {{userDetails.email}}</p>
+          <p *ngIf="!userDetails.email"><span>EMAIL</span> | {{userDetails.email}}</p>
+
+        </div>
+
+        <div class="col-md-3 text-center">
+          <!-- Phone & Social -->
+          <span class="number" style="font-size:18px; color: white;">Phone | +91-9876512340</span>
+          <!-- <div class="button" style="padding-top:18px">
+              <a href="mailto:ahmkctg@yahoo.com" class="btn btn-outline-success btn-block">Send Email</a>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--End of Header-->
+</body>

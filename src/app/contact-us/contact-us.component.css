@@ -1,0 +1,67 @@
+body {
+    background-image: url('../../assets/images/wallpapers/worldmap2.jpg');
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fill;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+#contact .card:hover i,
+#contact .card:hover h4 {
+    color: #87d37c;
+}
+
+h3 {
+    color: crimson;
+}
+
+p {
+    color: dodgerblue;
+    font-family: 'Muli', sans-serif;
+    font-size: 2rem;
+}
+
+.phone {
+    color: #131313;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+}
+
+.email {
+    color: #131313;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+}
+
+address {
+    color: #131313;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* new enquiry form */
+label {
+    color: dodgerblue;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 1.5rem;
+}
+
+span {
+    color: orangered;
+}
+
+.form-control {
+    background-color: #F0F8FF;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.2rem;
+}
+
+.form-control:hover {
+    border: 1px solid dodgerblue;
+}

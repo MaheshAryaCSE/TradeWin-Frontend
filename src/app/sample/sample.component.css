@@ -1,0 +1,30 @@
+.block1 {
+    background-color: #d5f4e6;
+    margin: 10px;
+    padding: 10px;
+}
+
+.block2 {
+    background-color: #d5f4ff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.block3 {
+    background-color: #d5cce6;
+    margin: 10px;
+    padding: 10px;
+}
+
+.selected {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin: 10px
+}
+
+.unselected {
+    background-color: white;
+    padding: 10px;
+    margin: 10px
+}

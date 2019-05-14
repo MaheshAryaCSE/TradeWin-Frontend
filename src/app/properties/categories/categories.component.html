@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="outline">
+    <div class="col-sm-12 left">
+      <div class="col-sm-3 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="main">
+            Main categories
+          </li>
+          <li class="line nohover">
+            <a routerLink="#">All Ads</a>
+          </li>
+          <li class="nohover" *ngFor="let list of products">
+            <a routerLinkActive="active-link" routerLink='/categories/{{list}}'>{{list}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <a routerLink='/india' class="anchor">
+      <img src="./assets/images/jobs/map-marker.svg" width="2%" style="padding-bottom: 7px">
+      <b style="font-size: 18px">All India</b>
+      <small>(Select your city to see local ads)</small>
+    </a>
+  </div>
+</div>
+
+<div class="col-sm-12 line">
+  <img src="{{properties.image}}" class="col-sm-2">
+   <span class="col-sm-10">
+       <p class="size">{{properties.name}}</p>
+       <!-- {{properties.ads}} -->
+       <br>
+       <a routerLink=''>View all Ads >></a>
+   </span>
+</div>
+<div class="col-sm-12" style="padding-top: 30px">
+   <div class="col-sm-2 box text-center" *ngFor="let list of properties.subcategory">
+     <a routerLink='/{{properties.name}}/{{list._id}}'>
+       <img src="{{list.image}}">
+       <br> {{list.name}}</a>
+   </div>
+</div>
+
+<img src="http://localhost:4090/uploads/0e074c6d44d8bbaf31bb923691a8cd50" alt="" srcset="">

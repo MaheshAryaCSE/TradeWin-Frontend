@@ -1,0 +1,182 @@
+.slider-size {
+    height: 400px; 
+  }
+ .carousel-control {
+    top: 46%;
+    background-color: none;
+  }
+  .carousel-control.left,  .carousel-control.right{
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    
+}
+
+
+ .list-display ul{
+    display: table-cell;
+    padding: 0px;
+    margin: 0px;
+    /* width: 18%; */
+ }
+ .popularcities-margin{
+     margin-left: 15px;
+ }
+ .popularcities-margin>li>a:hover{
+     color: #f70;
+ }
+ .allindiacities{
+     /* border-left: 1px solid black; */
+    overflow: auto;
+ }
+ .allindiacities ul{
+    padding: 5px 0px;
+ }
+ .allindiacities ul li{
+    list-style: none;
+ }
+ /* .allindiacities ul li a{
+    padding: 6px 28px 6px 12px;
+ } */
+ .allindiacities ul li a:hover{
+     color: #f70;
+ }
+ .list-display li{
+    list-style: none;
+    width: 20%;
+ }
+ .list-display a{
+    text-decoration: none;
+ }
+ .viewport{
+    border-top: 1px solid #cccccc;
+    height: 290px;
+    overflow: auto;
+    background-color: white;
+ }
+ .viewport > .table {
+    height: 100%;
+    table-layout: fixed;
+ }
+ .table {
+    display: table;
+    background-color: white;
+ }
+ .full {
+    width: 100% !important;
+    padding-bottom: 10px;
+ }
+ .column {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px 0px;
+    border-left: 1px solid #ccc;
+ }
+ .part25 {
+    width: 25%;
+ }
+ .column li{
+    list-style: none;
+    padding: 10px;
+    font-size: 15px;
+ }
+ li.selected a > * {
+    color: #f70;
+ }
+ .column a{
+    text-decoration: none;
+ }
+ .title{
+    padding: 14px 5px;
+    margin: 10px 12px;
+    position: relative;
+    content: ' ';
+    background: #cae0eb;
+    border-radius: 5px;
+    text-align: center;
+ }
+ .popular-cities{
+    background: #f3f3f3;
+    padding: 12px;
+    font-size: 11px;
+    line-height: 16px;
+ }
+ .region-set{
+    padding: 5px 0px 5px 15px;
+    width: 80%;
+    border-radius: 5px;
+ }
+ .formdetails{
+    background-color: rgba(49, 112, 143, 0.32);padding: 20px 0px; border-radius: 8px;
+ }
+ .input-type{
+    padding: 5px 5px 5px 15px ;border-radius: 5px; margin-left: 5px;
+ }
+ .input-add-search{
+    width: 65%; padding: 5px 5px 5px 10px ;border-radius: 5px;margin-left: 5px;
+ }
+ .search-button{
+    height: 35px;
+    width: 10%;
+    background-color: blue;
+    margin-left: 10px;
+    padding: 0px;
+    border: 2px solid white;
+ }
+ .filter-search{
+    margin-top: 0px;
+    top: 82%;
+    left: 0px;
+    width: auto !important;
+    min-width: 405px;
+    z-index: 10;
+    max-height: 200px;
+    overflow: auto;
+    text-shadow: 0 0 0 transparent;
+    border: 1px solid #cccccc;
+    background: #fff;
+    line-height: 16px;
+    position: absolute;
+ }
+ .filter-borders{
+     border-bottom: 1px solid #cccccc;
+     padding:10px;
+     cursor: pointer;
+     text-align: left;
+ }
+ .filter-borders:hover{
+     color: #f70;
+ }
+ .banner-image{
+    background-color: black; height: 300px;margin:10px 0px;padding: 0px;
+ }
+ table{
+    border-collapse: collapse;
+ }
+ .setting-rows{
+    width: 24%;border-color: #999999; border-left:white; border-top: white; padding: 10px 5px;
+ }
+ .setting-rows a{
+    text-decoration: none;
+ }
+ .setting-borders{
+    text-align: center;  padding:20px 0px;
+ 
+ }
+ .setting-borders td{
+    vertical-align: top;
+ }
+ 
+ .setgif{
+    float: right ! important;
+    text-align: right;
+    padding: 10px  15px 0px 5px;
+ }
+ .icongrid>tr>td:nth-child(1){
+    border-top: none; border-left: none; border-bottom: #999999; border-right: #999999;
+ }
+ 
+
+ #vid{
+    margin-top: 2%; 
+ }

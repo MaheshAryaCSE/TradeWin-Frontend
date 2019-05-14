@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container filtering">
+  <div class="row">
+    <div class="col-xs-12 filter">
+      <div class="col-xs-3">
+        <i>Brand name</i>
+        <br>
+        <select class="form-control">...</select>
+      </div>
+      <div class="col-xs-3">
+        <i>Model</i>
+        <br>
+        <select class="form-control">...</select>
+      </div>
+      <div class="col-xs-3">
+        <div class="col-xs-6 pricefrom">
+          <i>price from</i>
+          <br>
+          <select class="form-control">...</select>
+        </div>
+        <div class="col-xs-6 priceto">
+          <i>price to</i>
+          <br>
+          <select class="form-control">...</select>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="col-xs-6 pricefrom">
+          <i>Sort by</i>
+          <br>
+          <select class="form-control">
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h4 class="text-left">Featured Ads</h4>
+    <div *ngIf="cartData">
+      <div class="col-xs-12   add-border" *ngFor="let index of cartData.cartList,let x=index">
+        <div class="col-xs-2">
+          <img src="{{ index.image }}" alt="No image" class="img-fluid">
+        </div>
+        <div class="col-xs-4 add-title">
+          {{index.name}}
+          <br>
+          <p class="add-model">{{index.model}}</p>
+        </div>
+        <div class="col-xs-2">
+          <p class="add-address">{{index.address}}</p>
+        </div>
+        <div class="col-xs-2">
+          <button class="button btn-primary" (click)="removeCart(index._id)">Remove</button>
+        </div>
+        <div class="col-xs-2 text-right">
+          <b> {{ index.price | currency:'INR'}}</b>
+        </div>
+      </div>
+      <button class="button btn-primary pull-right" (click)="showBill()">ProceedToBill</button>
+
+    </div>
+    <div class="container tab">
+      <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+      <table *ngIf="display" class="table table-striped ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let index of cartData.cartList,let x=index">
+            <th scope="row">{{x+1}}</th>
+            <td>{{index.name}}</td>
+            <td>{{index.price | currency:'INR'}}</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td><strong>Total</strong></td>
+            <td><strong>{{ bill.total | currency:'INR'}}</strong> </td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td><strong>GST (18%)</strong> </td>
+            <td><strong>{{ this.bill.gst | currency:'INR'}}</strong> </td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td><strong>Vat (2%)</strong> </td>
+            <td><strong>{{ this.bill.vat | currency:'INR'}}</strong></td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td><strong>Total Bill</strong> </td>
+            <td><strong>{{ this.bill.billAmount | currency:'INR'}}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+    <div class="row">
+      <div *ngIf="display" class="col-sm-6">
+        <button *ngIf="display" class="button btn-primary pull-right" (click)="payBill()">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='message' class="alert alert-info  text-center">{{message}}</div>
+</div>

@@ -1,0 +1,217 @@
+<body>
+  <br>
+  <div class="container">
+    <hr class="style">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="nav nav-pills nav-justified" role="tablist">
+          <a class="nav-item nav-link active" href="#edit" data-toggle="pill" role="tab">
+            <i class="fa fa-cog fa-fw" aria-hidden="true"></i>
+            Edit Profile
+          </a>
+          <a class="nav-item nav-link" href="#upload" data-toggle="pill" role="tab">
+            <i class="fa fa-upload fa-fw" aria-hidden="true"></i>
+            Upload Image
+          </a>
+          <a class="nav-item nav-link" href="#add" data-toggle="pill" role="tab">
+            <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+            Sell Any Product
+          </a>
+        </nav>
+      </div>
+    </div>
+    <br><br>
+
+    <!-- Edit Profile -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="edit" role="tabpanel">
+            <form action="">
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="firstname">
+                    <i class="fa fa-user fa-fw"></i>                   
+                  </label>
+                  <input type="text" class="form-control" name="firstname" [(ngModel)]="userDetails.firstName" placeholder="Enter First Name" required>
+                </div>
+                <div class="col-md-5">
+                  <label for="lastname">
+                    <i class="fa fa-user-o fa-fw"></i>
+                    Last Name
+                  </label>
+                  <input type="text" class="form-control" name="lastName" [(ngModel)]="userDetails.lastName" placeholder="Enter Last Name" required>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="dateofbirth">
+                    <i class="fa fa-calendar-o fa-fw"></i>
+                    Date of Birth
+                  </label>
+                  <input type="date" class="form-control" name="dateofbirth"  [(ngModel)]="userDetails.dateofbirth" placeholder="Enter Date of Birth" required>
+                </div>
+                <div class="col-md-5">
+                  <label for="designation">
+                    <i class="fa fa-briefcase fa-fw"></i>
+                    Designation
+                  </label>
+                  <input type="text" class="form-control" name="designation"  [(ngModel)]="userDetails.designation" placeholder="Enter Designation" required>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="username">
+                    <i class="fa fa-user-circle fa-fw"></i>
+                    User Name
+                  </label>
+                  <input type="text" class="form-control" name="userName" [(ngModel)]="userDetails.userName" placeholder="Enter User Name" required>
+                </div>
+                <div class="col-md-5">
+                  <label for="email">
+                    <i class="fa fa-envelope fa-fw"></i>
+                    Email Address
+                  </label>
+                  <input type="email" class="form-control" name="email" [(ngModel)]="userDetails.email" placeholder="Enter Email Address" required>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="address">
+                    <i class="fa fa-map-marker fa-fw"></i>
+                    Address
+                  </label>
+                  <textarea class="form-control" name="address" [(ngModel)]="userDetails.address" placeholder="Enter Address" cols="3" rows="3"
+                    required></textarea>
+                </div>
+                <div class="col-md-5">
+                  <label for="phonenumber">
+                    <i class="fa fa-phone fa-fw"></i>
+                    Contact Number
+                  </label>
+                  <input type="number" class="form-control" name="phoneNumber" [(ngModel)]="userDetails.phoneNumber" placeholder="Enter Phone Number" required>
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="col-md-5 btn btn-info btn-3d" type="submit" (click)="updateUser()">
+                    <i class="fa fa-pencil"></i>
+                    UPDATE PROFILE
+                  </button>
+                  <button class="col-md-5 btn btn-danger btn-3d" type="reset">
+                    <i class="fa fa-eraser"></i>
+                    RESET PROFILE
+                  </button>
+                </div>
+              </div>
+            </form>
+            <br>
+          </div>
+          <!-- End -->
+
+
+          <!-- Upload Image -->
+          <div class="tab-pane fade" id="upload" role="tabpanel">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="image">
+                    <i class="fa fa-file-image-o fa-fw"></i>
+                    Upload New Image
+                  </label>
+                  <input type="file" class="form-control" name="image" required>
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="col-md-3 btn btn-info btn-3d" type="submit">
+                    <i class="fa fa-pencil"></i>
+                    UPDATE IMAGE
+                  </button>
+                  <button class="col-md-3 btn btn-danger btn-3d" type="reset">
+                    <i class="fa fa-eraser"></i>
+                    RESET IMAGE
+                  </button>
+                </div>
+              </div>
+            </form>
+            <br>
+          </div>
+          <!-- End -->
+
+          <!-- Add New Content -->
+          <div class="tab-pane fade" id="add" role="tabpanel">
+            <form action="">
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="newpassword">
+                    <i class="fa fa-unlock-alt fa-fw"></i>
+                    Select Product
+                  </label>
+                  <select name="product" id="product" class="form-control">
+                    <option value="none">None</option>
+                    <option value="cars">Cars</option>
+                    <option value="bikes">Bikes</option>
+                    <option value="mobiles">Mobiles</option>
+                    <option value="laptops">Laptops</option>
+                  </select>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="name">
+                    <i class="fa fa-unlock fa-fw"></i>
+                    Product Name
+                  </label>
+                  <input type="text" class="form-control" name="name" placeholder="Enter Product Name" required>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="price">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    Product Selling Cost
+                  </label>
+                  <input type="number" class="form-control" name="cost" placeholder="Enter Product Cost">
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="address">
+                    <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                    Address
+                  </label>
+                  <textarea name="address" id="address" class="form-control" cols="5" rows="5">Enter Address</textarea>
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="col-md-5 btn btn-info btn-3d" type="submit">
+                    <i class="fa fa-pencil"></i>
+                    SEND DETAILS
+                  </button>
+                  <button class="col-md-5 btn btn-danger btn-3d" type="reset">
+                    <i class="fa fa-eraser"></i>
+                    RESET DETAILS
+                  </button>
+                </div>
+              </div>
+            </form>
+            <br>
+          </div>
+          <!-- End -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

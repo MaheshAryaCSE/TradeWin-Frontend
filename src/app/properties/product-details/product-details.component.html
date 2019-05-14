@@ -1,0 +1,57 @@
+<div class="container filtering">
+  <div class="row">
+    <div class="col-xs-12 filter">
+      <div class="col-xs-3">
+        <i>Brand name</i>
+        <br>
+        <select class="form-control">...</select>
+      </div>
+      <div class="col-xs-3">
+        <i>Model</i>
+        <br>
+        <select class="form-control">...</select>
+      </div>
+      <div class="col-xs-3">
+        <div class="col-xs-6 pricefrom">
+          <i>price from</i>
+          <br>
+          <select class="form-control">...</select>
+        </div>
+        <div class="col-xs-6 priceto">
+          <i>price to</i>
+          <br>
+          <select class="form-control">...</select>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="col-xs-6 pricefrom">
+          <i>Sort by</i>
+          <br>
+          <select class="form-control">
+
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h4 class="text-left">Featured Ads</h4>
+    <div class="col-xs-12  add-border" *ngFor="let index of productinfo.sub">
+      <div class="col-xs-2">
+        <img src="{{ index.image }}" alt="No image" width="52px" height="52px;" class="img-fluid">
+      </div>
+      <div class="col-xs-8 add-title">
+        {{index.name}}
+        <br>
+        <p class="add-model">{{ index.model}}</p>
+        <b class="add-address">{{ index.address }}</b>
+      </div>
+      <button class="button btn-primary" (click)="addCart(index.name)">AddCart</button>
+      <div class="col-xs-2 add-price text-right">
+        <b> {{ index.price }}</b>
+      </div>
+    </div>
+  </div>
+</div>

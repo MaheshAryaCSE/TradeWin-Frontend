@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <a routerLink='/india' class="anchor">
+      <img src="./assets/images/jobs/map-marker.svg" width="2%" style="padding-bottom: 7px">
+      <b style="font-size: 18px">All India</b>
+      <small>(Select your city to see local ads)</small>
+    </a>
+  </div>
+</div>
+<div class="col-sm-12 line">
+  <img src="{{bikes.image}}" class="col-sm-2">
+  <span class="col-sm-10">
+    <p class="size">{{bikes.name}}</p>
+    1,78,016 Ads
+    <br>
+    <a routerLink=''>View all Ads >></a>
+  </span>
+</div>
+<div class="col-sm-12" style="padding-top: 30px">
+  <div class="col-sm-2 box text-center" *ngFor="let list of bikes.subcategory">
+    <a routerLink='/{{bikes.name}}/{{list._id}}'>
+      <img src="{{list.image}}">
+      <br> {{list.name}}</a>
+  </div>
+ </div>
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-xs-2 col-sm-2 col-md-2"> <img  class="img-fluid" src="./assets/images/bikes/bikes.png">
+        <span>
+          <p>Bikes</p>
+          <br>
+        </span></div>
+      <div class="col-xs-2 col-sm-2 col-md-2"> <img class="img-fluid"  src="./assets/images/bikes/bikes.png">
+        <span>
+          <p>Bikes</p>
+          <br>
+        </span></div>
+      <div class="col-xs-2 col-sm-2 col-md-2"> <img class="img-fluid"  src="./assets/images/bikes/bikes.png">
+        <span>
+          <p>Bikes</p>
+          <br>
+        </span></div>
+      <div class="col-xs-2 col-sm-2 col-md-2"> <img class="img-fluid"  src="./assets/images/bikes/bikes.png">
+        <span>
+          <p>Bikes</p>
+          <br>
+        </span></div>
+     
+    </div>
+</div> -->
